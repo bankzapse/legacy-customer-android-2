@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="7dp"
+            android:src="@drawable/share_x" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/black">
+
+        <fonts.DBHelvethaicaX.LiTextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="แค่แนะนำเพื่อนมาใช้บริการ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"/>
+
+        <fonts.DBHelvethaicaX.LiTextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv1"
+            android:text="คุณและเพื่อนจะได้รับส่วนลด - บาท"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"/>
+
+        <RelativeLayout
+            android:id="@+id/rlReferralCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@id/tvDiscount">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/share_frame"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/edtReferralCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:textSize="@dimen/font_large"
+                android:imeOptions="actionDone"/>
+
+            <ImageButton
+                android:id="@+id/ibEditReferralCode"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/referral_edit"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <fonts.DBHelvethaicaX.LiTextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TIP: คุณสามารถตั้งชื่อรหัสโค้ดตามที่คุณต้องการได้"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:layout_below="@id/rlReferralCode"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/btnShareFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="#425e9c"
+            android:drawableLeft="@drawable/share_fb"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Share code on Facebook"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"/>
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/btnShareOther"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/green"
+            android:drawableLeft="@drawable/share_line"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Message friends"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"/>
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/btnCopy"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/orange500"
+            android:drawableLeft="@drawable/share_copy"
+            android:paddingLeft="20dp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:text="Copy your code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tvCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="คุณมียอดสะสม - บาท"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"/>
+
+        <fonts.DBHelvethaicaX.LiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="คะแนนส่วนลดจะถูกใช้อัตโนมัติ เมื่อใช้บริการครั้งถัดไป"
+            android:textSize="@dimen/font_small"/>
+
+    </LinearLayout>
+
+</LinearLayout>

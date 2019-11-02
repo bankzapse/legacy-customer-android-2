@@ -1,0 +1,339 @@
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg">
+
+    <fragment
+        android:id="@+id/mMapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:padding="7dp"
+            android:src="@drawable/menu" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="DRIVER TRACKING"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:padding="7dp"
+            android:src="@drawable/location" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noDriverView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:layout_above="@+id/btCancel"
+        android:visibility="gone">
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblNoDriverHead"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="การจองบริการเสร็จสมบูรณ์"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_large" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblNoDriver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/lblNoDriverHead"
+            android:text="@string/d_lblNoDriver"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/driverView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:layout_above="@+id/btCancel"
+        android:visibility="gone">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/driver_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FF000000"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_below="@+id/driver_image"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="5.0"
+            android:stepSize="0.5" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblDriverName"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/driver_image"
+            android:maxLines="1"
+            android:lines="1"
+            android:text=""
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge" />
+
+        <ImageView
+            android:id="@+id/badge1"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/driver_image"
+            android:layout_below="@id/lblDriverName"/>
+
+        <ImageView
+            android:id="@+id/badge2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/badge1"
+            android:layout_below="@+id/lblDriverName"/>
+
+        <ImageView
+            android:id="@+id/badge3"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/badge2"
+            android:layout_below="@+id/lblDriverName"/>
+
+        <ImageView
+            android:id="@+id/badge4"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/badge3"
+            android:layout_below="@+id/lblDriverName"/>
+
+        <ImageView
+            android:id="@+id/badge5"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/badge4"
+            android:layout_below="@+id/lblDriverName"/>
+
+        <ImageView
+            android:id="@+id/badge6"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/badge5"
+            android:layout_below="@+id/lblDriverName"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/badgeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/greyAlpha"
+        android:layout_above="@+id/btCancel"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="15dp"
+            android:background="@color/black">
+
+            <ImageButton
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/close"/>
+
+            <ImageView
+                android:id="@+id/ivBadge"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile_pic"/>
+
+            <TextView
+                android:id="@+id/badgeDesc"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:padding="15dp"
+                android:scrollbars = "vertical"
+                android:layout_below="@+id/ivBadge"/>
+
+            <fonts.DBHelvethaicaX.MedCondButton
+                android:id="@+id/btnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/badgeDesc"
+                android:text="กดที่นี่เพื่อดูวิดีโอการอบรม"
+                android:textColor="@color/blue_curious"
+                android:textSize="@dimen/font_medium"
+                android:background="@android:color/transparent"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/waitMessageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/greyAlpha"
+        android:layout_above="@+id/btCancel"
+        android:visibility="gone">
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblWaitDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:layout_above="@+id/lblWaitTime"
+            android:text="@string/d_lblWaitDriver"
+            android:background="@color/blue_curious"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_medium" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblWaitTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="50%"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="@string/d_lblWaitTime"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/lblWaitCost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="50%"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/lblWaitTime"
+            android:layout_centerVertical="true"
+            android:text="@string/d_lblWaitCost"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/lblWaitTime"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/lblWaitTime"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/btCancel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_toRightOf="@+id/separator"
+        android:background="@color/blue_curious2"
+        android:gravity="center"
+        android:text="@string/d_btCancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_large"
+        app:layout_widthPercent="49.5%" />
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        app:layout_widthPercent="1%"/>
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/btContact"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/separator"
+        android:background="@color/blue_curious2"
+        android:gravity="center"
+        android:text="@string/d_btContact"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large"
+        app:layout_widthPercent="49.5%" />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

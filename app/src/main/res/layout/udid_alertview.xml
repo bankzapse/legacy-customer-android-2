@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <fonts.DBHelvethaicaX.MedCondTextView
+        android:id="@+id/dTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="ERROR"
+        android:textColor="#08b9ff"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/dImage"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:paddingBottom="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/crying"
+        android:visibility="gone"/>
+
+    <fonts.DBHelvethaicaX.LiTextView
+        android:id="@+id/dMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="Please fill out all field"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:id="@+id/llYesNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/dBtnNo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="No"
+            android:textColor="@color/grey500"
+            android:background="#fefefe"
+            android:textSize="@dimen/font_large" />
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/dBtnYes"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="Yes"
+            android:textColor="@color/grey500"
+            android:background="#fefefe"
+            android:textSize="@dimen/font_large" />
+
+    </LinearLayout>
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/dBtnOK"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#fefefe"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/grey500"
+        android:textSize="@dimen/font_large" />
+
+</LinearLayout>

@@ -1,0 +1,366 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="7dp"
+            android:src="@drawable/close" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/createaccount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
+        <LinearLayout
+            android:id="@+id/llDone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:text="@string/done"
+                android:textColor="@color/blue_curious"
+                android:textSize="@dimen/font_medium" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:layout_gravity="right|center"
+                android:layout_margin="5dp"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                facebook:com_facebook_login_text="CONNECT WITH FACEKOOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="4.5"
+                    android:background="@color/grey400" />
+
+                <fonts.DBHelvethaicaX.MedCondTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="or"
+                    android:textColor="@color/grey400"
+                    android:textSize="@dimen/font_medium" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="4.5"
+                    android:background="@color/grey400" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ivProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_pic"
+                app:civ_border_color="@color/grey400"
+                app:civ_border_width="0.5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <fonts.DBHelvethaicaX.MedCondButton
+                    android:id="@+id/btnMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@color/grey300"
+                    android:text="Mr"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_large" />
+
+                <fonts.DBHelvethaicaX.MedCondButton
+                    android:id="@+id/btnFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@color/grey300"
+                    android:text="Ms"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_large" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <fonts.DBHelvethaicaX.MedEditText
+                    android:id="@+id/edtFirstname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="@null"
+                    android:hint="First Name*"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:inputType="textNoSuggestions"
+                    android:textColorHint="@color/grey400"
+                    android:textSize="@dimen/font_large"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/grey400" />
+
+                <fonts.DBHelvethaicaX.MedEditText
+                    android:id="@+id/edtLastname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="@null"
+                    android:hint="Last Name*"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:inputType="textNoSuggestions"
+                    android:textColorHint="@color/grey400"
+                    android:textSize="@dimen/font_large"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/grey400" />
+
+            <fonts.DBHelvethaicaX.MedEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:hint="Email*"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:textColorHint="@color/grey400"
+                android:textSize="@dimen/font_large"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/grey400" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <fonts.DBHelvethaicaX.MedEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:hint="Password*"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:textColorHint="@color/grey400"
+                    android:textSize="@dimen/font_large"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"/>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/grey400" />
+
+                <fonts.DBHelvethaicaX.MedEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:hint="Phone Number*"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:textColorHint="@color/grey400"
+                    android:textSize="@dimen/font_large"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/grey400" />
+
+            <fonts.DBHelvethaicaX.MedTextView
+                android:id="@+id/tvBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:hint="Date of Birth"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:textColorHint="@color/grey400"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/grey400" />
+
+            <fonts.DBHelvethaicaX.MedEditText
+                android:id="@+id/edtReferralCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@null"
+                android:hint="Referral Code"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:inputType="textNoSuggestions"
+                android:textColorHint="@color/grey400"
+                android:textSize="@dimen/font_large"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/grey400"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <fonts.DBHelvethaicaX.MedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="By signing up, you agree to our"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_small" />
+
+                <fonts.DBHelvethaicaX.MedTextView
+                    android:id="@+id/tvTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Terms of Service  and Privacy Policy"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font_small" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

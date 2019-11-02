@@ -1,0 +1,144 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.31.2'
+//        classpath 'io.fabric.tools:gradle:1.+'
+//        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.8.1'
+    }
+}
+
+//plugins {
+//    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.8.1'
+//}
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+//    maven { url 'http://clinker.47deg.com/nexus/content/groups/public' }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+    google()
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "app.udrinkidive.feed2us.com.customer"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 54
+        versionName "2.0.7"
+//        versionName "46-20181029-DEV"
+        multiDexEnabled true
+//        manifestPlaceholders = [
+//        onesignal_app_id: '95920584-7ba6-4e9a-9a29-a7fccfab30e6',
+//        onesignal_google_project_number: '665136907244'
+//        ]
+//        manifestPlaceholders = [
+//                onesignal_app_id: '9a8e260f-e9dd-4bd5-b2da-3d9a76ce3d18',
+//                onesignal_google_project_number: '1041694311773'
+//        ]
+        manifestPlaceholders = [
+                onesignal_app_id: '95920584-7ba6-4e9a-9a29-a7fccfab30e6',
+                onesignal_google_project_number: '1041694311773'
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+//    implementation 'com.android.support:support-v4:26.1.0'
+//    implementation 'com.onesignal:OneSignal:[3.6.0, 3.99.99]'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'de.hdodenhof:circleimageview:2.0.0'
+    implementation 'com.jakewharton:butterknife:8.2.1'
+    implementation 'com.jakewharton:butterknife-compiler:8.2.1'
+
+//    implementation('com.crashlytics.sdk.android:crashlytics-ndk:2.0.5@aar') {
+//        transitive = true
+//    }
+//    implementation 'com.github.elevenetc:badgeview:v1.0.0'
+    implementation 'com.cocosw:bottomsheet:1.5.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:percent:28.0.0'
+    implementation 'com.wdullaer:materialdatetimepicker:2.4.0'
+    implementation 'io.branch.sdk.android:library:2.19.5'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+//    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+//    implementation 'com.google.firebase:firebase-database:19.0.0'
+//    implementation 'com.google.firebase:firebase-auth:19.0.0'
+//    implementation 'com.firebase:firebase-jobdispatcher:0.8.6'
+    implementation 'org.jsoup:jsoup:1.10.2'
+
+    //OTP PinView
+    implementation 'com.chaos.view:pinview:1.4.2'
+    implementation 'com.github.stfalcon:smsverifycatcher:0.3.2'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "558538879278",
+    "firebase_url": "https://u-drink-i-drive-beta.firebaseio.com",
+    "project_id": "u-drink-i-drive-beta",
+    "storage_bucket": "u-drink-i-drive-beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558538879278:android:d6b42c00d1f2e405",
+        "android_client_info": {
+          "package_name": "app.udrinkidive.feed2us.com.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558538879278-ghufhm55trhg20n3b2efsfk40f06fl7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHKaxkGSb1jhVTw_a_UjlAKOEukzBktzU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

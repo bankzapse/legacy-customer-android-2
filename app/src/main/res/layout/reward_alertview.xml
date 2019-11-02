@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_dark"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <fonts.DBHelvethaicaX.MedCondTextView
+        android:id="@+id/dTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_udid"
+        android:gravity="center"
+        android:text="REWARD"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/dImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/dName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="COCKTAIL DRINK   "
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_large" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dName"
+                android:text="value "
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/dPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dName"
+                android:layout_toRightOf="@id/value"
+                android:text="1,330 bath"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/dPrice"
+                android:layout_marginRight="15dp"
+                android:background="@color/white" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/dDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:maxLines = "20"
+                android:scrollbars = "vertical"/>
+                <!--android:maxLines="5"-->
+                <!--android:ellipsize="end"-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/dMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="คุณต้องการแลกของรางวัลชิ้นนี้หรือไม่?"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/dBtnYes"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_udid"
+        android:gravity="center"
+        android:text="CONFIRM"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium" />
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/dBtnNo"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp"
+        android:background="#fefefe"
+        android:gravity="center"
+        android:text="CANCEL"
+        android:textAllCaps="false"
+        android:textColor="@color/grey500"
+        android:textSize="@dimen/font_medium" />
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="U DRINK "
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="I DRIVE"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_xlarge" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/llhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="35dp"
+                android:src="@drawable/mastercard" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/visa" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llcreditnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llhead"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/firstCreditNum"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/secondCreditNum"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/thirdCreditNum"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/fourthCreditNum"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/creditStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llcreditnum"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_micro" />
+
+
+        <EditText
+            android:id="@+id/holderName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/creditStatus"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/greyAlpha"
+            android:hint="@string/pm_holder"
+            android:imeOptions="actionNext"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/blue_curious2"
+            android:textSize="@dimen/font_small" />
+
+
+        <LinearLayout
+            android:id="@+id/llcvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/holderName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/mm"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:hint="@string/pm_mm"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/blue_curious2"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/yy"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:hint="@string/pm_yy"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/blue_curious2"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/cardCCV"
+                android:layout_width="@dimen/creditnum_size"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/greyAlpha"
+                android:digits="0123456789"
+                android:hint="@string/pm_cvv"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/blue_curious2"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <fonts.DBHelvethaicaX.MedCondButton
+                android:id="@+id/btAdd"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="@string/pm_btAdd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <fonts.DBHelvethaicaX.MedCondButton
+                android:id="@+id/btCancel"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/pm_btCancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

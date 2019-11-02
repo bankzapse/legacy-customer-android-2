@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <fonts.DBHelvethaicaX.MedCondTextView
+        android:id="@+id/dTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="มีค่าบริการนอกโซน"
+        android:textColor="#08b9ff"
+        android:textSize="35sp" />
+
+    <fonts.DBHelvethaicaX.LiTextView
+        android:id="@+id/dMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="300 บาท"
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/dBtnOK"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#fefefe"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/grey500"
+        android:textSize="@dimen/font_large" />
+
+</LinearLayout>

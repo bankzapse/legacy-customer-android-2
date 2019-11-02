@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_color"
+        android:padding="9dp">
+
+        <ImageView
+            android:id="@+id/ivReward"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/header_rule" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:background="@color/grey600">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="10dp"
+                android:text="COCKTAIL DRINK   "
+                android:textColor="@color/blue"
+                android:maxLength="18"
+                android:ellipsize="end"
+                android:textSize="@dimen/font_medium" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/tvKm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentRight="true"
+                android:text="150 km"
+                android:layout_marginRight="3dp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/tvName"
+                android:background="@color/white" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/tvDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/separator"
+                android:layout_marginTop="2dp"
+                android:text="Cocktail Drink จำนวน 10 รางวัล"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/tvExclusive"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/tvDetail"
+                android:text="Exclusive for Good Citizen Member"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_small" />
+
+            <fonts.DBHelvethaicaX.CondTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/tvExclusive"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="9dp"
+                android:text="วันนี้ - 31 ธ.ค.​59"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/ivLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/loyalty_lock" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

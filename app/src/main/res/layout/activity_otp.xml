@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/postot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp" >
+
+    <LinearLayout
+        android:id="@+id/ln_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/image_sms_otp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/otp_sms"
+            android:layout_marginLeft="10dp"/>
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter OTP"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:transitionName="text"/>
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Verification code is sent via sms"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:transitionName="text"/>
+
+    </LinearLayout>
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:hint="X"
+        android:textColorHint="#5B5A5A"
+        android:inputType="numberSigned"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:state_selected="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        app:cursorColor="@color/white"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="58dp"
+        app:itemWidth="58dp"
+        app:lineColor="@color/white"
+        app:lineWidth="2dp"
+        app:viewType="line" />
+    <requestFocus />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Didn't receive OTP?"
+            android:textColor="@color/white"
+            android:textSize="24dp"/>
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Resend Code"
+            android:textColor="@color/blue"
+            android:textSize="24dp"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+
+    <fonts.DBHelvethaicaX.MedCondButton
+        android:id="@+id/btConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_large" />
+
+
+</LinearLayout>

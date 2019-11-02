@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/greyAlpha"
+    android:paddingLeft="6dp"
+    android:layout_marginBottom="16dp"
+    android:paddingRight="6dp"
+    android:orientation="vertical" >
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/tvDate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="3dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        android:text="Oct 30" />
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/tvTime"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="3dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvDate"
+        android:textColor="@color/white"
+        android:text="18:00" />
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/tvPickup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="3dp"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/tvFee"
+        android:layout_toRightOf="@+id/tvDate"
+        android:textColor="@color/white"
+        android:text="Pickup" />
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/tvDropoff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="3dp"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/tvFee"
+        android:layout_toRightOf="@+id/tvDate"
+        android:layout_below="@+id/tvPickup"
+        android:textColor="@color/white"
+        android:text="Dropoff" />
+
+    <fonts.DBHelvethaicaX.CondTextView
+        android:id="@+id/tvFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="3dp"
+        android:layout_marginRight="5dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:text="฿" />
+
+</RelativeLayout>

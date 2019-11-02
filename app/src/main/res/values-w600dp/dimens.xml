@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="creditnum_size">120dp</dimen>
+
+    <dimen name="layout_margin_left">60dp</dimen>
+    <dimen name="layout_margin">60dp</dimen>
+</resources>

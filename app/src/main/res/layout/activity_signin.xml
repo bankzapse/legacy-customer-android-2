@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="7dp"
+            android:src="@drawable/close" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/signin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
+        <LinearLayout
+            android:id="@+id/llDone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="0dp"
+                android:text="@string/done"
+                android:textColor="@color/blue_curious"
+                android:textSize="@dimen/font_medium" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:layout_gravity="right|center"
+                android:layout_margin="5dp"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="4.5"
+            android:background="@color/grey400" />
+
+        <fonts.DBHelvethaicaX.MedCondTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="or"
+            android:textColor="@color/grey400"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_weight="4.5"
+            android:background="@color/grey400" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/separator"
+        android:padding="10dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <fonts.DBHelvethaicaX.MedEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:alpha="0.8"
+            android:background="@color/grey"
+            android:hint="@string/si_edt_username"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/blue"
+            android:textSize="@dimen/font_medium" />
+
+        <fonts.DBHelvethaicaX.MedEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_username"
+            android:layout_margin="5dp"
+            android:alpha="0.8"
+            android:background="@color/grey"
+            android:hint="@string/si_edt_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/blue"
+            android:textSize="@dimen/font_medium" />
+
+    </RelativeLayout>
+
+    <fonts.DBHelvethaicaX.MedTextView
+        android:id="@+id/tvForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="220dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="perform_action"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="@string/si_tvForgot"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium" />
+</RelativeLayout>

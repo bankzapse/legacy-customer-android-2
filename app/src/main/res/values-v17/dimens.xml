@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_checkbox">0dp</dimen>
+
+    <dimen name="layout_margin_left">40dp</dimen>
+    <dimen name="layout_margin">15dp</dimen>
+</resources>

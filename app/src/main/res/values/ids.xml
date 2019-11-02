@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvTimeup" type="id" />
+    <item name="index" type="id" />
+    <item name="fav_state" type="id" />
+    <item name="dropoff_state" type="id" />
+
+</resources>

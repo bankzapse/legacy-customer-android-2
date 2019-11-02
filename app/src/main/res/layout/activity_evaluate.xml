@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="U DRINK "
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="I DRIVE"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_xlarge" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tvPickupTime"
+            android:background="@color/white" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@id/tvPickupTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="11 NOV 2015 11.11"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/blue_curious"
+            android:textSize="@dimen/font_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tvPickupTime"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPickupTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="฿"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_superlarge" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tvPriceFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:text="@string/e_tvPriceFinal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <RelativeLayout
+            android:id="@+id/rlTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="6dp"
+            android:layout_below="@id/tvPriceFinal"
+            android:background="@android:color/transparent">
+
+            <fonts.DBHelvethaicaX.MedTextView
+                android:id="@+id/tvTipTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Tip Your Driver"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+
+            <fonts.DBHelvethaicaX.MedTextView
+                android:id="@+id/tvTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/tvTipTitle"
+                android:layout_toLeftOf="@+id/btnDecrease"
+                android:gravity="center"
+                android:text="0   THB"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"/>
+
+            <ImageView
+                android:id="@+id/btnDecrease"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnIncrease"
+                android:src="@drawable/decrease" />
+
+            <ImageView
+                android:id="@+id/btnIncrease"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/increase_active"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/rlTip"
+            android:layout_toLeftOf="@id/tvPickupTime"
+            android:background="@color/white" />
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/rlTip"
+            android:text="@string/e_rate"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/blue_curious"
+            android:textSize="@dimen/font_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/rlTip"
+            android:layout_toRightOf="@id/tvPickupTime"
+            android:background="@color/white" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/driver_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/header2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/usericon"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <fonts.DBHelvethaicaX.MedTextView
+            android:id="@+id/tvDriverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/driver_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:maxLines="1"
+            android:text="@string/e_tvDriverName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:progressBackgroundTint="@color/grey"
+            android:progressTint="@color/yellow_signin"
+            android:secondaryProgressTint="@color/yellow_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_below="@+id/tvDriverName"
+            android:layout_centerHorizontal="true" />
+
+        <fonts.DBHelvethaicaX.MedCondButton
+            android:id="@+id/btDone"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/blue_curious"
+            android:gravity="center"
+            android:text="DONE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
+    </RelativeLayout>
+
+</LinearLayout>

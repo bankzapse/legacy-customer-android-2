@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/wait_no" android:title="No"/>
+    <item android:id="@+id/wait_30" android:title="30 min (+300 B)"/>
+    <item android:id="@+id/wait_60" android:title="60 min (+500 B)"/>
+</menu>

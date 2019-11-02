@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/llBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="7dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="U DRINK "
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="I DRIVE"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_xlarge" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:padding="5dp">
+
+        <fonts.DBHelvethaicaX.MedCondTextView
+            android:id="@+id/tvMode"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="MODE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
+        <RelativeLayout
+            android:id="@+id/rlSearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMode"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <fonts.DBHelvethaicaX.MedEditText
+                android:id="@+id/edtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey300"
+                android:hint="@string/s_edtLocation"
+                android:imeOptions="actionDone"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/edtLocation"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/search"
+                android:visibility="gone"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/autocomplete_places"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="@string/s_edtLocation"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:background="@color/grey300"/>
+
+            <ImageView
+                android:id="@+id/imgClear"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/x_search"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/headerSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/rlSearchBox"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blue_curious"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/tvNearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/s_tvNearby"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/tvFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/s_tvFav"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <fonts.DBHelvethaicaX.MedCondTextView
+                android:id="@+id/tvRecent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/s_tvRecent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/headerSearch"
+            android:layout_above="@+id/rlBottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#00000000"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="6dip"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent" />
+
+        <RelativeLayout
+            android:id="@id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rlMap"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <fragment
+                    android:id="@+id/mMapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvcenter"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/marker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvcenter"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/marker_pickup" />
+
+            </RelativeLayout>
+
+            <fonts.DBHelvethaicaX.MedCondButton
+                android:id="@+id/btConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:layout_below="@id/rlMap"
+                android:gravity="center"
+                android:text="@string/s_btConfirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
