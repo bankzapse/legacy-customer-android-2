@@ -42,8 +42,8 @@ android {
         applicationId "app.udrinkidive.feed2us.com.customer"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 54
-        versionName "2.0.7"
+        versionCode 55
+        versionName "2.0.8"
 //        versionName "46-20181029-DEV"
         multiDexEnabled true
 //        manifestPlaceholders = [

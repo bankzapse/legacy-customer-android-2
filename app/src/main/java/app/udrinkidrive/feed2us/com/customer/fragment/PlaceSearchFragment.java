@@ -725,6 +725,7 @@ public class PlaceSearchFragment extends Fragment implements OnMapReadyCallback,
 
         Call<DelFavLocationDao> call = HttpManager.getInstance().getService().delFavLocation(String.valueOf(lists.get(row).getLatitude()), String.valueOf(lists.get(row).getLongitude()), SPUtils.getString(getContext(), Value.API_KEY));
         call.enqueue(new Callback<DelFavLocationDao>() {
+
             @Override
             public void onResponse(Call<DelFavLocationDao> call, Response<DelFavLocationDao> response) {
                 progressDia.dismiss();
@@ -754,6 +755,11 @@ public class PlaceSearchFragment extends Fragment implements OnMapReadyCallback,
                     }
                 }
             }
+
+//            @Override
+//            public void onResponse(Call<DelFavLocationDao> call, Response<DelFavLocationDao> response) {
+//
+//            }
 
             @Override
             public void onFailure(Call<DelFavLocationDao> call, Throwable t) {
